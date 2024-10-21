@@ -1,0 +1,31 @@
+// Diba maqueta styles v3
+@import 'abstracts/variables';
+@import "abstracts/colors";
+
+// Bootstrap variables personalitzades diba.
+$primary:                      $color-diba;
+$dropdown-border-radius:       0;
+$dropdown-bg:                  $color-gris-clar;
+$dropdown-link-active-color:   $color-diba;
+$dropdown-link-active-bg:      $color-gris-mig;
+$dropdown-link-hover-color:    $color-text-dark;
+$dropdown-link-hover-bg:       $color-gris-mig;
+$dropdown-border-width:        0;
+$dropdown-item-padding-y:      15px;
+$dropdown-header-padding-y:    0;
+$carousel-indicator-height:    5px;
+$navbar-toggler-border-radius: 0;
+$navbar-toggler-focus-width:   0;
+$enable-negative-margins:      true;
+$breadcrumb-active-color:      $color-text-light;
+$breadcrumb-divider-color:     $color-text-light;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Components
+@import "components/utils";
+@import "components/theme";
+@import "components/dropdown";
+@import "components/carousel";
+@import "components/navbar-toggler";
+@import "components/breadcrumb";

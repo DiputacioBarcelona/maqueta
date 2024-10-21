@@ -1,0 +1,61 @@
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+{% block contact %}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="">
+    </script>
+    <script>
+        let map1 = L.map('mapa1').setView([41.5, 2.3], 13);
+        let map2 = L.map('mapa2').setView([41.8, 1.5], 9);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: "Diputació de Barcelona"
+        }).addTo(map1);
+        L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}&hl=ca', {
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+            attribution: "Diputació de Barcelona"
+        }).addTo(map2);
+    </script>
+{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <h1 class="visually-hidden">Maqueta corporativa</h1>
+        <div class="container">
+            <div class="text-justify p-4">
+                <p>
+                    Per realitzar mapes no utilitzem sol·lucions que impliquin costos per consum. Les principals
+                    llibreries que acostumem a utilitzar són
+                    <a href="https://leafletjs.com/" target="_blank">Leaflet</a> i
+                    <a href="https://openlayers.org/" target="_blank">OpenLayers</a>, aquestes llibreries permeten afegir marcadors o
+                    fer clústers de punts.
+                </p>
+                <p>
+                    Els mapes poden utilitzar un layout amb <code>.container</code> o <code>.container-fluid</code>
+                    segons si necessiten utilitzar tot l'ample disponible o no.
+                </p>
+                <p><em>*Exemples fets amb Leaflet i cartografies d'OpenStreepMap i GoogleMaps.</em></p>
+            </div>
+        </div>
+        <div class="container-fluid pb-4 px-0">
+            <div id="mapa1" class="height:500px"></div>
+        </div>
+        <div class="container pb-4 px-0">
+            <div id="mapa2" style="height:500px"></div>
+        </div>
+    </div>
+{% endblock %}

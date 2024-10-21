@@ -1,0 +1,26 @@
+
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+{% block contact %}{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <div class="container">
+            <div class="text-justify p-4">
+                <h3 class="c-diba">Symfony</h3>
+                <p>
+                    Hi ha un exemple de plantilla amb Symfony al repositori de codi corporatiu: symfony/starterkit
+                </p>
+                {% apply spaceless %}
+                    <pre class="bg-gris rounded p-2">
+                        <code>git clone https://codifont.diba.cat/symfony/starterkit.git</code>
+                    </pre>
+                {% endapply %}
+                <p>
+                    Per accedir al nostre repositori de codi necessites estar donat d'alta al nostre grup LDAP MCO_GITm.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

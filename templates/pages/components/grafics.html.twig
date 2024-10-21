@@ -1,0 +1,57 @@
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+{% block contact %}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('exemplegrafic');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Opció A', 'Opció B', 'Opció C', 'Opció D', 'Opció E', 'Opció F'],
+                datasets: [{
+                    label: 'Nombre de Vots',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <h1 class="visually-hidden">Maqueta corporativa</h1>
+        <div class="container">
+            <div class="text-justify p-4">
+                <p>
+                    Per realitzar gràfics no utilitzem sol·lucions que impliquin costos per consum. Les principals
+                    llibreries que acostumem a utilitzar són
+                    <a href="https://www.chartjs.org/" target="_blank">Chartjs</a> i
+                    <a href="https://d3js.org/" target="_blank">D3js</a>.
+                </p>
+
+                <div>
+                    <p><em>*Exemple fet amb Chartjs.</em></p>
+                    <canvas id="exemplegrafic"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

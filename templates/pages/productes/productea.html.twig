@@ -1,0 +1,30 @@
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block banner %}
+    <div class="product-banner">
+        <img alt="Escola de la dona" src="assets/img/demo/cap_escola_dona.png" class="img-fluid">
+        <div class="product-banner-footer bg-color9 text-white p-2 ms-4 mt-n4 z-1 position-relative fw-semibold">
+            <span class="mx-3">|</span> <a href="#" class="text-white text-decoration-none">Feminismes i igualtat</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block contingut %}
+    <div class="container">
+        {% include 'partials/menu-secondary.html.twig' with {'color': 'c-color9'} only %}
+    </div>
+
+    <div id="content">
+        <div class="container">
+
+            {% block breadcrumb %}
+                {% include 'partials/breadcrumb.html.twig' %}
+            {% endblock %}
+
+            <h1 class="visually-hidden">Maqueta corporativa</h1>
+            <div class="text-center p-4">--- Contingut central ---</div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+# Cache 1 dia pel contingut estpàtic de la maqueta
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+  Header set Cache-Control "max-age=86400, public"
+</filesMatch>
+
+# Força https
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+# Permetem el CORS.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# Bloca directoris on no cal acces directe.
+RedirectMatch 404 /\.git
+RedirectMatch 404 /bin
+RedirectMatch 404 /node_modules
+RedirectMatch 404 /templates
+RedirectMatch 404 /vendor

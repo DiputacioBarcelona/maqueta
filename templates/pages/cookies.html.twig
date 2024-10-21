@@ -1,0 +1,34 @@
+
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+{% block contact %}{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <h1 class="visually-hidden">Maqueta corporativa</h1>
+        <div class="container">
+            <div class="text-justify p-4">
+                <div id="cookies">
+                    <h2 class="c-diba h3">Missatge de cookies</h2>
+                    <p>
+                        Exemple de missatge de cookies amb integració amb el Google tag manager. L'idioma del missatge va
+                        amb l'idioma definit en el HTML de la web, per tant, si es vol un missatge multilingüe el missatge
+                        de les cookies aquest canviarà segons l'idioma definit en el html
+                        <code>{{ '<html lang="ca">'|escape('html') }}</code> i en les variables per idioma del javascript:
+                        <code>{{ 'data-lang-ca="..."'|escape('html') }}</code>.
+                    </p>
+                    <p>Exemple Javascript cookies que a d'anar dins del tag HTML <code>{{ '<head></head>'|escape('html') }}</code>:</p>
+
+                    {% apply spaceless %}
+                        <pre class="bg-gris rounded p-2">
+                            <code>
+                                {{- include('partials/code/cookies.html.twig') | escape('html') -}}
+                            </code>
+                        </pre>
+                    {% endapply %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

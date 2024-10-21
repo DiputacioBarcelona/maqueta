@@ -1,0 +1,23 @@
+.diba-baner {
+  height: 100px;
+  background-color: $color-diba;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .diba-baner-title {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 1rem;
+  }
+
+  .img-escut {
+    margin-left: auto;
+    height: 160px;
+    right: -40px;
+    top: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+}

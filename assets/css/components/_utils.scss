@@ -1,0 +1,65 @@
+// Logo classes.
+@each $name, $size in $logos {
+  .logo-#{$name} {
+    max-height: $size;
+    width: auto;
+  }
+  .height-#{$name} {
+    height: $size;
+  }
+}
+
+// Colors temàtics.
+@each $name, $color in $temes {
+  .c-color#{$name} {
+    color: $color !important;
+  }
+  .bg-color#{$name} {
+    background-color: $color !important;
+  }
+}
+
+// Colors diba.
+.c-diba {
+  color: $color-diba !important;
+}
+.bg-diba {
+  background-color: $color-diba !important;
+}
+.bg-gris {
+  background-color: $color-gris-mig !important;
+}
+.c-text {
+  color: $color-text !important;
+}
+.c-text-dark {
+  color: $color-text-dark !important;
+}
+.c-text-light {
+  color: $color-text-light !important;
+}
+
+// Altres utilitats.
+.bottom-diba {
+  border-bottom: 4px solid $color-diba;
+}
+
+.zoom-hover {
+  transition: all 200ms ease-in;
+  transform: scale(1);
+
+  &:hover {
+    z-index: 2;
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+  }
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.separador {
+  opacity: 1;
+  border-top: 8px solid $color-gris-mig;
+}

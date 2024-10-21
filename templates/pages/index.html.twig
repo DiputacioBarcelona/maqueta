@@ -1,0 +1,137 @@
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+{% block contact %}{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <h1 class="visually-hidden">Maqueta corporativa</h1>
+        <div class="container">
+            <div class="p-4 text-justify">
+                <div id="help">
+                    <p>
+                        Maqueta corporativa de la Diputació de Barcelona v3 basada en Boostrap 5.
+                        La maqueta utilitza CSS i JS propis que s'han creat compilant el SASS de bootstrap definint les
+                        variables de color, tipografia, icones i altres classes i components addicionals segons les
+                        especificacions de la maqueta de la Diputació de Barcelona.
+                    </p>
+                    <p>
+                        L'objectiu és facilitar la creació de noves pàgines web de la Diputació de Barcelona, no haver
+                        de sobre-escriure els valors definits per Bootstrap per defecte i mantenir els components de
+                        forma centralitzada.
+                    <p>
+                        La maqueta gràfica inclou:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://getbootstrap.com/docs/5.3" target="_blank">Bootstrap 5</a> compilat amb les
+                            variables adaptades a les especificacions de la Diputació de Barcelona
+                        </li>
+                        <li><a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap icons</a> </li>
+                        <li>Icones de la Diputació de Barcelona</li>
+                        <li>Útils i components de la maqueta gràfica</li>
+                        <li>Missatge de cookies i llibreria Javascript per gestionar l'acceptació</li>
+                    </ul>
+                </div>
+
+                <div id="getstarter">
+                    <h2 class="c-diba h3">Com començar</h2>
+                    <p>Exemple d'HTML mínim:</p>
+
+                    {% apply spaceless %}
+                    <pre class="bg-gris rounded p-2">
+                        <code>
+                            {{- include('partials/code/getstarter.html.twig') | escape('html') -}}
+                        </code>
+                    </pre>
+                    {% endapply %}
+
+                    <h2 class="c-diba h3">Altres versions</h2>
+
+                    <p>
+                        Si no necessites tots els components de la maqueta pots utilitzar altres compilacions amb menys
+                        funcionalitats. Per exemple, pots utilitzar la compilació de Bootstrap 5 sense icones.
+                    </p>
+
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Compilació</th>
+                                <th scope="col">CSS</th>
+                                <th scope="col">Ús</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Maqueta diba amb icones</th>
+                                <td>Diba Bootstrap icons + diba layout styles</td>
+                                <td>https://maqueta.diba.cat/v3/assets/css/diba-maqueta-icons.css</td>
+                                <td>Maqueta completa. Recomanat si fas servir el nostre layout i icones.</td>
+                            </tr>
+                            <tr>
+                                <th>Maqueta diba</th>
+                                <td>Diba Bootstrap + diba layout styles</td>
+                                <td>https://maqueta.diba.cat/v3/assets/css/diba-maqueta.css</td>
+                                <td>
+                                    Maqueta sense icones. Recomanat si fas servir el nostre layout i no necessites
+                                    icones o les inclous al projecte per separat o utilitzes una altra llibreria.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Bootstrap diba amb icones</th>
+                                <td>Diba Bootstrap icons = Bootstrap + utils + components diba + icons</td>
+                                <td>https://maqueta.diba.cat/v3/assets/css/diba-bootstrap-icons.css</td>
+                                <td>
+                                    Bootstrap adaptat corporatiu amb icones. Recomanat si fas servir icones però no el
+                                    nostre layout.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Bootstrap diba</th>
+                                <td>Diba Bootstrap = Bootstrap + utils + components diba</td>
+                                <td>https://maqueta.diba.cat/v3/assets/css/diba-bootstrap.css</td>
+                                <td>
+                                    Bootstrap adaptat corporatiu. Recomanat si no fas servir icones ni el nostre layout,
+                                    o si simplement necessites reemplaçar les CSSs d'un Bootstrap estàndard per un de
+                                    corporatiu amb els nostres colors i variables.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 class="c-diba h3">Variables de compilació</h2>
+
+                    <p>Com a referència s'ha compilat la maqueta Bootstrap 5 definint les següents variables:</p>
+
+                    <code>abstracts/_variables.scss</code>
+                    {% apply spaceless %}
+                        <pre class="bg-gris rounded p-2">
+                        <code>
+                            {{- include('partials/code/variables.html.twig') | escape('html') -}}
+                        </code>
+                    </pre>
+                    {% endapply %}
+
+                    <code>abstracts/_colors.scss</code>
+                    {% apply spaceless %}
+                        <pre class="bg-gris rounded p-2">
+                        <code>
+                            {{- include('partials/code/variables-colors.html.twig') | escape('html') -}}
+                        </code>
+                    </pre>
+                    {% endapply %}
+
+                    <code>Bootstrap overrides</code>
+                    {% apply spaceless %}
+                        <pre class="bg-gris rounded p-2">
+                        <code>
+                            {{- include('partials/code/variables-bootstrap.html.twig') | escape('html') -}}
+                        </code>
+                    </pre>
+                    {% endapply %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

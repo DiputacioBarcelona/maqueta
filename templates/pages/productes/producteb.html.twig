@@ -1,0 +1,27 @@
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block banner %}
+    <div class="row product-banner">
+        <img alt="Vies blaves" src="assets/img/demo/cap_vies_blaves.png">
+    </div>
+{% endblock %}
+
+{% block contingut %}
+    <div class="container">
+        {% include 'partials/menu-secondary.html.twig' with {'color': 'c-color5'} only %}
+    </div>
+
+    <div id="content">
+        <div class="container">
+
+            {% block breadcrumb %}
+                {% include 'partials/breadcrumb.html.twig' %}
+            {% endblock %}
+
+            <h1 class="visually-hidden">Maqueta corporativa</h1>
+            <div class="text-center p-4">--- Contingut central ---</div>
+        </div>
+    </div>
+{% endblock %}

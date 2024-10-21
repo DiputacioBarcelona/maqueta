@@ -1,0 +1,38 @@
+{% extends 'front.html.twig' %}
+
+{% block banner %}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="">
+    </script>
+    <script>
+        var map = L.map('mapa').setView([41.39, 2.05], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+    </script>
+{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <h1 class="visually-hidden">Maqueta corporativa</h1>
+        <div class="container">
+            <div class="text-center p-4">--- Contingut central ---</div>
+        </div>
+        <div class="container p-4">
+            <div id="mapa" style="height:400px"></div>
+        </div>
+    </div>
+{% endblock %}

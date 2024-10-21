@@ -1,0 +1,11 @@
+.dropdown-menu {
+  padding: 0 .5rem;
+
+  li .dropdown-item {
+    white-space: normal;
+    border-bottom: 1px solid $color-gris-fosc;
+  }
+  li:last-child .dropdown-item {
+    border-bottom: 0;
+  }
+}

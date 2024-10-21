@@ -1,0 +1,213 @@
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+{% block contact %}{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <div class="container">
+            <div class="p-4">
+                <div id="logos" class="mb-4">
+                    <h4 class="c-diba">Logos</h4>
+                    <p>
+                        Per a logos o imatges en diferents mides pots utilitzar les classes CSS <code>.logo-{size}</code>
+                        i/o <code>.height-{size}</code> per fixar la mida de les imatges. La classe
+                        <code>.logo-{size}</code> defineix una mida màxima, però la imatge es pot adaptar a mides més
+                        petites, i la classe <code>.height-{size}</code> fixa la mida. La mida per defecte d'un logo és:
+                        <code>md</code>.
+                    </p>
+
+                    {% set logos = {
+                        'xxs': '20px',
+                        'xs': '30px',
+                        'sm': '40px',
+                        'md': '50px',
+                        'lg': '80px',
+                        'xl': '100px',
+                        'xxl': '150px'
+                    } %}
+
+                    <div class="content">
+                        {% for size, height in logos %}
+                            <figure class="figure me-2">
+                                <img src="assets/img/logos/diba.svg" class="figure-img img-fluid logo-{{ size }} height-{{ size }}" alt="Diputació de Barcelona">
+                                <figcaption class="figure-caption text-center">
+                                    <strong>{{ height }}</strong><br>
+                                    .logo-{{ size }}<br>
+                                    .height-{{ size }}
+                                </figcaption>
+                            </figure>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="colors" class="mb-4">
+                    <h4 class="c-diba">Colors</h4>
+                    <p>
+                        Podem utilitzar els colors principals amb les classes CSS <code>.c-{color}</code> pels colors
+                        del text i <code>.bg-{color}</code> pels colors de fons. A més de les classes de colors de
+                        <a href="https://getbootstrap.com/docs/5.3/utilities/colors/#colors">Bootstrap</a> es defineixen
+                        unes classes per la paleta de colors corporatius.
+                    </p>
+
+                    <div class="content clearfix">
+                        <div class="border p-2 me-2 mb-2 border c-diba float-start fw-semibold">.c-diba</div>
+                        <div class="border p-2 me-2 mb-2 border bg-diba text-white float-start fw-semibold">.bg-diba</div>
+                        <div class="border p-2 me-2 mb-2 border bg-gris float-start fw-semibold">.bg-gris</div>
+                        <div class="border p-2 me-2 mb-2 border c-text float-start fw-semibold">.c-text</div>
+                        <div class="border p-2 me-2 mb-2 border c-text-dark float-start fw-semibold">.c-text-dark</div>
+                        <div class="border p-2 me-2 mb-2 border c-text-light float-start fw-semibold">.c-text-light</div>
+                    </div>
+
+                    <p>També es defineixen varis colors temàtics corporatius que depènen de l'àmbit temàtic de cada web.</p>
+
+                    <div class="content clearfix">
+
+                        {% for i in 1..17 %}
+                            {% if i in [2,4,6,8,10] %}
+                                {# colors that needs dark contrast #}
+                                {% set textClass = ' c-text-dark' %}
+                                {% set bgClass = ' bg-dark' %}
+                            {% else %}
+                                {# colors that needs white contrast #}
+                                {% set textClass = ' text-white' %}
+                                {% set bgClass = '' %}
+                            {% endif %}
+                            <div class="border p-2 me-2 mb-2 border c-color{{ i }} float-start fs-5 fw-semibold{{ bgClass }}">.c-color{{ i }}</div>
+                            <div class="border p-2 me-2 mb-2 border bg-color{{ i }} float-start fs-5 fw-semibold{{ textClass }}">.bg-color{{ i }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="temes" class="mb-4">
+                    <h4 class="c-diba">Temes: esquemes de colors</h4>
+                    <p>
+                        Pots canviar el color del teu menú secundari i de tots els enllaços del contingut simplement afegint al
+                        body o a algun element superior la classe <code>class=".theme-color{color}"</code>.
+                    </p>
+
+                    <div class="content clearfix">
+                        {% for i in 1..17 %}
+                            <code>.theme-color{{ i }}</code>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="accessibilitat i colors" class="mb-4">
+                    <h4 class="c-diba">Accessibilitat i aplicació dels colors</h4>
+                    <p>No tota combinació de colors de text + fons són vàlids, el contrast mínim ha de ser:</p>
+                    <ul>
+                        <li><strong>4,5:1</strong> pel text normal</li>
+                        <li>
+                            <strong>3:1</strong> pel text gran: 18pt (aprox. 1.5rem o 24px) o 14pt+negreta (aprox.
+                            1.2rem o 19px)
+                        </li>
+                    </ul>
+                    <p>
+                        Pots utilitzar la classe <code>fs-4</code> per augmentar la mida de la font a 24px o les
+                        classes <code>fs-5 fw-semibold</code> per augmentar la font a 20px+negreta per
+                        poder complir el contrast 3:1 enlloc del 4,5:1.
+                    </p>
+                    <p>Exemples d'aplicacions vàlides i invàlides segons el compliment d'accessibilitat AA:</p>
+
+                    <div class="btn-group me-4" role="group" aria-label="colors vàlids">
+                        <div class="p-2 bg-diba text-white">bg-diba text-white</div>
+                        <div class="p-2 text-success">
+                            <i class="bi bi-check-circle"></i> vàlid
+                        </div>
+                    </div>
+                    <div class="btn-group me-4" role="group" aria-label="colors invàlids">
+                        <div class="p-2 bg-gris c-text-light">bg-gris c-text-light</div>
+                        <div class="p-2 text-danger">
+                            <i class="bi bi-x-circle"></i> invàlid
+                        </div>
+                    </div>
+                    <div class="btn-group me-4" role="group" aria-label="colors vàlids">
+                        <div class="p-2 bg-gris c-text-light fs-5 fw-semibold">bg-gris c-text-light fs-5 fw-semibold</div>
+                        <div class="p-2 text-success">
+                            <i class="bi bi-check-circle"></i> vàlid
+                        </div>
+                    </div>
+                    <div class="btn-group me-4" role="group" aria-label="colors invàlids">
+                        <div class="p-2 bg-diba c-text-dark">bg-diba c-text-dark</div>
+                        <div class="p-2 text-danger">
+                            <i class="bi bi-x-circle"></i> invàlid
+                        </div>
+                    </div>
+                </div>
+
+                <div id="zoom-hover" class="mb-4">
+                    <h4 class="c-diba">Zoom hover</h4>
+                    <p>Els components poden utilitzar la classe <code>.zoom-hover</code> per destacar-los quan es passa el ratolí per sobre.</p>
+
+                    <figure class="figure me-4 zoom-hover">
+                        <img src="assets/img/logos/diba.svg" class="figure-img img-fluid logo-sm height-sm" alt="Diputació de Barcelona">
+                    </figure>
+
+                    <a class="btn btn-primary zoom-hover rounded-pill" href="#">Botó amb zoom hover</a>
+                </div>
+
+                <div id="spinner" class="mb-4">
+                    <h4 class="c-diba">Spinner</h4>
+                    <p>Les pantalles de càrrega o els processos asíncrons hauríen d'incorporar un spinner de càrrega.</p>
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4">
+                            <div class="spinner-border c-diba" role="status">
+                                <span class="visually-hidden">Carregant...</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <div class="spinner-grow c-diba" role="status">
+                                <span class="visually-hidden">Carregant...</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <div class="d-flex c-diba">
+                                <span class="spinner-border" role="status"></span>
+                                <span class="ms-2 m-auto">Carregant...</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <div class="d-flex c-diba">
+                                <span class="spinner-grow" role="status"></span>
+                                <span class="ms-2 m-auto">Carregant...</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <button class="btn btn-primary rounded-pill" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                <span class="ms-1" role="status">Carregant...</span>
+                            </button>
+                        </div>
+                        <div class="col-lg-2 col-md-4">
+                            <button class="btn btn-primary rounded-pill" type="button" disabled>
+                                <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                                <span class="ms-1" role="status">Carregant...</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="textos" class="mb-4">
+                    <h4 class="c-diba">Textos i apartats</h4>
+                    <p class="text-justify">Boostrap no ofereix classes d'utilitat per a text justificat. Tot i que,
+                        estèticament, el text justificat pot semblar més atractiu, fa que l'espai entre paraules sigui
+                        més aleatori i, per tant, més difícil de llegir. Tot i així la maqueta diba inclou la classe
+                        <code>.text-justify</code> per justificar el text si realment ho necessites.
+                    </p>
+
+                    <hr class="separador">
+
+                    <p>
+                        Utilitza la classe <code>.separador</code> juntament amb l'etiqueta hr o div o span per generar
+                        separadors entre diferents apartats.
+                    </p>
+
+                    <hr class="separador">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{
+    "require": {
+      "twig/twig": "^3.11",
+      "ext-dom": "*",
+      "ext-libxml": "*"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "php -r \"file_put_contents('vendor/.htaccess', 'Order allow,deny' . PHP_EOL . 'Deny from all');\""
+        ]
+    }
+}

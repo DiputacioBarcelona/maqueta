@@ -1,0 +1,210 @@
+
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+{% block contact %}{% endblock %}
+
+{% block contingut %}
+    <div id="content">
+        <h1 class="visually-hidden">Maqueta corporativa</h1>
+        <div class="container">
+            <div class="text-justify p-4">
+                <div id="formulari-inline" class="mb-4">
+                    <h2 class="c-diba mb-4 h3">Formulari - inline</h2>
+
+                    <form class="row gy-2 gx-3 align-items-center">
+                        <div class="col-auto">
+                            <label class="visually-hidden" for="inlineInput">Nom</label>
+                            <input type="text" class="form-control rounded-pill" id="inlineInput" placeholder="El teu nom">
+                        </div>
+                        <div class="col-auto">
+                            <label class="visually-hidden" for="inlineInputGroup">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-text rounded-start-pill">@</div>
+                                <input type="text" class="form-control rounded-end-pill" id="inlineInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <label class="visually-hidden" for="inlineSelect">Preferències</label>
+                            <select class="form-select rounded-pill" id="inlineSelect">
+                                <option selected> - Selecciona - </option>
+                                <option value="1">Primera</option>
+                                <option value="2">Segona</option>
+                                <option value="3">Tercera</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="inlineCheck" name="inlineCheck">
+                                <label class="form-check-label" for="inlineCheck">
+                                    Checkbox
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary rounded-pill"><i class="bi bi-box-arrow-in-right me-1"></i> Entra</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <hr>
+
+                <div id="formulari-filtre" class="mb-4">
+                    <h2 class="c-diba mb-4 h3">Formulari - filtre</h2>
+
+                    <form class="row gy-2 gx-3 align-items-center bg-gris p-3 pt-2 rounded border">
+                        <div class="col-xxl-3 col-xl-6">
+                            <label for="filerInput" class="ms-2">Nom</label>
+                            <input type="text" class="form-control rounded-pill" id="filerInput" placeholder="El teu nom">
+                        </div>
+                        <div class="col-xxl-3 col-xl-6">
+                            <label for="filerInputGroup" class="ms-2">Username</label>
+                            <div class="input-group">
+                                <div class="input-group-text rounded-start-pill">@</div>
+                                <input type="text" class="form-control rounded-end-pill" id="filerInputGroup" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="col-xxl-2 col-xl-4">
+                            <label for="filerSelect" class="ms-2">Preferències</label>
+                            <select class="form-select rounded-pill" id="filerSelect">
+                                <option selected> - Selecciona - </option>
+                                <option value="1">Primera</option>
+                                <option value="2">Segona</option>
+                                <option value="3">Tercera</option>
+                            </select>
+                        </div>
+                        <div class="col-xxl-2 col-xl-4">
+                            <label for="filerSelect2" class="ms-2">Preferències B</label>
+                            <select class="form-select rounded-pill" id="filerSelect2">
+                                <option selected> - Selecciona - </option>
+                                <option value="1">Primera</option>
+                                <option value="2">Segona</option>
+                                <option value="3">Tercera</option>
+                            </select>
+                        </div>
+                        <div class="col-xxl-2 col-xl-4 text-md-start text-center">
+                            <div class="mt-xl-4 mt-2">
+                                <button type="submit" class="btn btn-primary rounded-pill"><i class="bi bi-search me-1"></i> Filtra</button>
+                                <button type="submit" class="btn btn-secondary rounded-pill"><i class="bi bi-eraser me-1"></i> Neteja</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <hr>
+
+                <div id="formulari-horitzontal" class="mb-4">
+                    <h2 class="c-diba mb-4 h3">Formulari - horitzontal</h2>
+
+                    <form>
+                        <div class="row mb-3">
+                            <label for="horitzontalEmail" class="col-sm-2 col-form-label">Correu</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control rounded-pill" id="horitzontalEmail">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="horitzontalSelect" class="col-sm-2 col-form-label">Selecció</label>
+                            <div class="col-sm-10">
+                                <select class="form-select rounded-pill" id="horitzontalSelect">
+                                    <option value="1">Primera opció</option>
+                                    <option value="2">Segona opció</option>
+                                    <option value="3">Tercera opció</option>
+                                </select>
+                            </div>
+                        </div>
+                        <fieldset class="row mb-3">
+                            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Primer radio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        Segon radio
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                                    <label class="form-check-label" for="gridRadios3">
+                                        Tercer radio disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row mb-3">
+                            <div class="col-sm-10 offset-sm-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck1" name="gridCheck1">
+                                    <label class="form-check-label" for="gridCheck1">
+                                        Exemple de checkbox
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded-pill"><i class="bi bi-pencil me-1"></i> Desa</button>
+                    </form>
+                </div>
+
+                <hr>
+
+                <div id="formulari-apilat" class="mb-4">
+                    <h2 class="c-diba mb-4 h3">Formulari - apilat</h2>
+
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="apilatName" class="form-label ms-2">Nom</label>
+                            <input type="text" class="form-control rounded-pill" id="apilatName">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apilatSurname" class="form-label ms-2">Cognoms</label>
+                            <input type="text" class="form-control rounded-pill" id="apilatSurname">
+                        </div>
+                        <div class="col-12">
+                            <label for="apilatAdreca" class="form-label ms-2">Adreça</label>
+                            <input type="text" class="form-control rounded-pill" id="apilatAdreca" placeholder="Carrer">
+                        </div>
+                        <div class="col-12">
+                            <label for="apilatAdreca2" class="form-label ms-2">Adreça 2</label>
+                            <input type="text" class="form-control rounded-pill" id="apilatAdreca2" placeholder="Número, escala, pis">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="apilatProvincia" class="form-label ms-2">Província</label>
+                            <select id="apilatProvincia" class="form-select rounded-pill">
+                                <option selected>Barcelona</option>
+                                <option>Girona</option>
+                                <option>Lleida</option>
+                                <option>Tarragona</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apilatMunicipi" class="form-label ms-2">Municipi</label>
+                            <input type="text" class="form-control rounded-pill" id="apilatMunicipi">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="apilatCPostal" class="form-label ms-2">Codi postal</label>
+                            <input type="text" class="form-control rounded-pill" id="apilatCPostal">
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="apilatCheckbox" name="apilatCheckbox">
+                                <label class="form-check-label" for="apilatCheckbox">
+                                    Recorda'm
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary rounded-pill"><i class="bi bi-send me-1"></i> Envia</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

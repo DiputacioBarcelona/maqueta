@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body_container %}
+    <div class="container">
+        {% block body_header %}
+            <header class="py-4">
+                {% include 'partials/header.html.twig' %}
+            </header>
+        {% endblock %}
+
+        {% block menu_primary %}
+            {% include 'partials/menu-primary.html.twig' %}
+        {% endblock %}
+
+        {% block banner %}
+            {% include 'partials/banner.html.twig' %}
+        {% endblock %}
+    </div>
+
+    {% block main %}
+        <main>
+            {% block carousel %}
+                <div class="container">
+                    {% include 'partials/carousel.html.twig' %}
+                </div>
+            {% endblock %}
+            {% block contingut %}
+                <div id="content">
+                    <h1 class="visually-hidden">Maqueta corporativa</h1>
+                    <div class="container">
+                        <div class="text-center p-4">--- Contingut central ---</div>
+                    </div>
+                </div>
+            {% endblock %}
+        </main>
+    {% endblock %}
+
+    <div class="container">
+        {% block contact %}
+            {% include 'partials/contacte.html.twig' %}
+        {% endblock %}
+        {% block footer %}
+            <footer class="p-4">
+                {% include 'partials/footer_menu.html.twig' %}
+                {% include 'partials/footer_xs.html.twig' %}
+                {% include 'partials/footer.html.twig' %}
+            </footer>
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3",
+    "bootstrap-icons": "^1.11",
+    "mini-css-extract-plugin": "^2.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.89",
+    "webpack-cli": "^5.1"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}

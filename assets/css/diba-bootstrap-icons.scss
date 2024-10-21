@@ -1,0 +1,8 @@
+// Diba maqueta
+@import 'diba-bootstrap';
+
+// Icons
+$bootstrap-icons-font-src:
+        url("../fonts/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"),
+        url("../fonts/bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+@import "../fonts/bootstrap-icons/font/bootstrap-icons.scss";

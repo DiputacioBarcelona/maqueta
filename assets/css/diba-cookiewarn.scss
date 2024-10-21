@@ -1,0 +1,51 @@
+#cookieScriptBox {
+	background-color:#fff;
+	opacity:1 !important;
+	border-top:1px solid;
+  	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  	font-size: 14px;
+  	color: #333;
+
+	&>.text {
+		max-width:1140px;
+		margin:auto;
+		text-align:left;
+		padding:0 1rem;
+
+		a {
+			color: #891536;
+		}
+
+		&>ul {
+			list-style-position:inside;
+		}
+
+		&>.btn {
+  			text-transform: none;
+  			padding: 0.375rem 0.75rem;
+			margin-left: 1rem;
+			cursor: pointer;
+			float: right;
+		}
+
+		.btn-success {
+			color: #fff;
+			background-color:#891536;
+			border-color:#5d0e25;
+
+			&:hover {
+				background-color: #5d0e25;
+			}
+		}
+
+		.btn-warning {
+			color: #212529;
+			background-color:#fff;
+			border-color:#ccc;
+
+			&:hover {
+				background-color: #e6e6e6;
+			}
+		}
+	}
+}

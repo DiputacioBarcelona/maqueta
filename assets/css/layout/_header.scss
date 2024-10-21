@@ -1,0 +1,19 @@
+header {
+  a {
+    text-decoration: none;
+    color: $color-text-light;
+    font-size: $header-text-size;
+
+    &.active {
+      font-weight: bold;
+    }
+    &:hover {
+      color: $color-text-dark;
+    }
+  }
+
+  input, form, .form-control {
+    font-size: $header-text-size;
+    border: 0;
+  }
+}

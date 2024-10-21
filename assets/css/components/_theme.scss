@@ -1,0 +1,14 @@
+// Un tema diferent per color temàtic.
+@each $name, $color in $temes {
+  .theme-color#{$name} {
+    main {
+      .nav-link, .breadcrumb-item a {
+        color: $color;
+      }
+    }
+
+    #content a {
+        color: $color;
+    }
+  }
+}

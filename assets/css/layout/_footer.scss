@@ -1,0 +1,10 @@
+footer {
+  border-top: 8px solid $color-gris-mig;
+  border-bottom: 4px solid $color-diba;
+  font-size: $footer-text-size;
+
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
+}

@@ -1,0 +1,231 @@
+{% extends 'front.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block banner %}
+    <div class="product-banner">
+        <img alt="Escola de la dona" src="assets/img/demo/baner-cataleg.png" class="img-fluid">
+        <div class="product-banner-footer bg-color17 text-white p-2 ms-4 mt-n4 z-1 position-relative mb-2">
+            <a href="#" class="text-white text-decoration-none fw-bold ms-3">Sostenibilitat social</a>
+            <span class="mx-3">|</span>
+            <a href="#" class="text-white text-decoration-none fw-normal text-uppercase">ÀREA DE SOSTENIBILITAT SOCIAL, CICLE DE VIDA I COMUNITAT</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block contingut %}
+    <div id="content-wrapper">
+        <div class="container">
+
+            {% block breadcrumb %}
+                {% include 'partials/breadcrumb.html.twig' %}
+            {% endblock %}
+
+            <div class="row pb-4">
+                <div class="col-lg-9 col-md-8">
+                    <div id="content">
+                        <h1 class="visually-hidden">Maqueta corporativa</h1>
+                        <div class="d-md-none mb-4 text-end">
+                            <img src="assets/img/demo/logo-xgl.png" class="logo-xl" alt="Logo del XGL">
+                        </div>
+
+                        <h2 class="fw-bold h3">Finançament de programes i projectes de prevenció d'addiccions</h2>
+                        <div class="d-flex justify-content-between mb-4">
+                            <div>Nº 12345</div>
+                            <div class="text-uppercase">
+                                En termini
+                                <i class="bi bi-square-fill text-success"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-justify">Suport econòmic a activitats realitzades pels ens locals en matèria de memòria democràtica.</p>
+
+                        <p class="text-justify">S'entén per memòria democràtica les actuacions destinades a recuperar, reparar, dignificar,
+                            investigar, difondre i reflexionar a l'entorn d'espais, fets, persones i col·lectius relacionats
+                            amb la II República, la Guerra Civil i la Dictadura i, especialment, amb la repressió, l'exili i
+                            la lluita antifranquista.</p>
+
+                        <p>Inclou activitats:</p>
+
+                        <ul class="text-justify">
+                            <li>De reconeixement de la lluita antifranquista i de reparació de col·lectius i persones
+                                víctimes de la repressió franquista.</li>
+                            <li>De recerca, reflexió, difusió i divulgació de fets, col·lectius i persones relacionades amb
+                                la II República, la Guerra Civil i la Dictadura.</li>
+                            <li>Relacionades amb la recuperació, dignificació, senyalització i museïtzació d'Espais de
+                                Memòria (s'exclouen despeses d'inversions i material inventariable). S'entén per Espais de
+                                Memòria aquells espais d'accés públic amb elements commemoratius, d'interpretació o amb
+                                vestigis immobles visitables, corresponents a la II República, la Guerra Civil o la
+                                Dictadura.</li>
+                        </ul>
+
+                        <p class="text-justify">L'objectiu del recurs és contribuir a la recuperació de la memòria democràtica als pobles i
+                            ciutats de la demarcació de Barcelona, impulsar les polítiques en aquest àmbit i col·laborar amb
+                            els ens locals en el seu desenvolupament. Concretament es fixen tres grans objectius:</p>
+
+                        <ol class="text-justify">
+                            <li>Fomentar el reconeixement i la reparació de les víctimes i represaliats de la Guerra Civil i
+                                de la dictadura franquista.</li>
+                            <li>Donar a conèixer els fets, les persones i els valors de la II República i de la lluita
+                                antifranquista.</li>
+                            <li>Dinamitzar els Espais de Memòria democràtica municipals.</li>
+                        </ol>
+
+                        <p class="text-justify">D'acord amb les convocatòries corresponents, es preveu que el recurs estigui disponible a les
+                            anualitats 2024, 2025, 2026 i 2027.
+                        </p>
+
+                        <hr class="separador my-5">
+
+                        <div id="categories">
+                            <div class="row">
+                                <div class="col-md-6 d-flex align-items-start mb-2">
+                                    <i class="bi bi-building me-3 fs-2 c-diba"></i>
+                                    <div>
+                                        <div class="c-diba text-uppercase">
+                                            <span class="fw-semibold">Qui ho pot demanar</span> o destinataris
+                                        </div>
+                                        <p>Ajuntaments, consells comarcals, mancomunitat, consorcis locals.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-start mb-2">
+                                    <i class="bi bi-hand-thumbs-up me-3 fs-2 c-diba"></i>
+                                    <div>
+                                        <div class="c-diba text-uppercase fw-semibold">Recurs econòmic</div>
+                                        <p>Ajut econòmic.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-start mb-2">
+                                    <i class="bi bi-calendar me-3 fs-2 c-diba"></i>
+                                    <div>
+                                        <div class="c-diba text-uppercase">
+                                            <span class="fw-semibold">Període de tramitació</span>
+                                            o vigència i sol·licitud
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p>
+                                                    <span class="c-diba fw-semibold">2024</span> | 28/12/2023-08/02/2024<br>
+                                                    <span class="c-diba fw-semibold">2025</span> | Pendent
+                                                </p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>
+                                                     <span class="c-diba fw-semibold">2026</span> | Pendent<br>
+                                                     <span class="c-diba fw-semibold">2027</span> | Pendent
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-start mb-2">
+                                    <i class="bi bi-file-text me-3 fs-2 c-diba"></i>
+                                    <div>
+                                        <div class="c-diba text-uppercase fw-semibold">Procediment de concessió</div>
+                                        <p>Concurrència competitiva.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="separador mb-5 mt-3">
+
+                        <div id="criteris">
+                            <div class="c-diba text-uppercase fw-semibold">
+                                Termini màxim de resolució
+                            </div>
+                            <p>Tres mesos a partir de l'endemà de la data en què finalitzi el termini de sol·licitiud.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div id="lateral">
+
+                        <div class="d-none d-md-block mb-4">
+                            <img src="assets/img/demo/logo-xgl.png" class="logo-xxl" alt="Logo del XGL">
+                        </div>
+
+                        <h2 class="c-diba h5 fw-semibold border-bottom border-2 py-2 d-flex justify-content-between align-items-center">
+                            <span>La teva carpeta</span>
+                            <i class="bi bi-folder2-open"></i>
+                        </h2>
+                        <p class="text-justify" >La carpeta d'impressions conté tots els recursos...</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-plus-circle-fill me-2 c-diba fs-4"></i>
+                                <span>1. Afegeix a la carpeta</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle me-2 fs-4"></i>
+                                <span>2. Verifica la carpeta de recursos</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-download me-2 fs-4"></i>
+                                <span>3. Descarrega</span>
+                            </li>
+                        </ul>
+
+                        <hr class="separador my-5">
+
+                        <div class="c-diba fw-semibold text-uppercase">
+                            Convocatòria / Línia de suport
+                            <i class="bi bi-arrow-down-right ms-2"></i>
+                        </div>
+
+                        <p>
+                            Catàleg 2024-2027: Xarxa de Governs locals 2024
+                        </p>
+
+                        <a href="#" class="btn btn-primary text-uppercase rounded-0">Accedir a la Tramitació</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{%  block contact %}
+    <div class="bg-gris p-4 mb-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="c-diba text-uppercase fw-semibold">Uniat prestadora</div>
+                <div class="fw-semibold">Servei d'Atenció, Dependència i Vulnerabilitat Social</div>
+                <div class="c-text-light">Si voleu fer alguna consulta al centre gestor, la podeu fer via</div>
+                <div class="my-3">
+                    <i class="bi bi-telephone-fill me-2 c-diba"></i>
+                    934 022 739
+                    <i class="bi bi-envelope-fill ms-4 me-2 c-diba"></i>
+                    <a href="mailto:cs.depivulnerabilitat@diba.cat" class="c-text text-decoration-none">s.depivulnerabilitat@diba.cat</a>
+                </div>
+                <div class="c-text-light">o en el nostre formulari</div>
+                <a href="#" class="btn btn-light mt-3 mb-2 rounded-0 border bg-white">Accedeix</a>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-auto">
+                        <i class="bi bi-pc-display-horizontal c-diba fs-1"></i>
+                    </div>
+                    <div class="col">
+                        <div class="c-text-light">Suport informàtic DIBA</div>
+                        <div class="mb-3">
+                            <i class="bi bi-telephone-fill me-2 c-text-light"></i>
+                            <span class="c-diba fw-semibold">934 029 802</span>
+                        </div>
+                        <div>Suport</div>
+                        <div class="mb-3">
+                            <i class="bi bi-telephone-fill me-2 c-text-light"></i>
+                            <span class="c-diba fw-semibold">934 029 802</span>
+                        </div>
+                        <div>
+                            <a href="#" class="c-text-light text-decoration-none">
+                                Consultes, queixes i suggeriments <i class="bi bi-box-arrow-up-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
